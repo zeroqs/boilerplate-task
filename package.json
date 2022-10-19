@@ -71,7 +71,9 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "dev": "concurrently \"npm run start\" \"gulp watch\""
+    "dev": "concurrently \"npm run start\" \"gulp watch\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix reactFolderName && npm run build --prefix reactFolderName"
+
   },
   "eslintConfig": {
     "extends": [
